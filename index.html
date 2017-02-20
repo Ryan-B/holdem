@@ -1,0 +1,1304 @@
+<html>
+<body>
+<div id="player_div">
+	<h1>Josh</h1>
+		<p class="p1" id="player1V1"></p>
+		<p class="p1" id="player1S1"></p>
+		<img class="player_card_img" src="" id="player1C1">
+		<p class="p1" id="player1V2"></p>
+		<p class="p1" id="player1S2"></p>
+		<img class="player_card_img" src="" id="player1C2">
+	<button onclick="joshFunction()">Show</button>
+	
+</div>	
+
+<div id="player_div">
+	<h1>Kendal</h1>
+	
+		<p class="p1" id="player2V1"></p>
+		<p class="p1" id="player2S1"></p>
+		<img class="player_card_img" src="" id="player2C1">
+		<p class="p1" id="player2V2"></p>
+		<p class="p1" id="player2S2"></p>
+		<img class="player_card_img" src="" id="player2C2">
+	<button onclick="kenFunction()">Show</button>
+</div>
+
+<div id="player_div">
+	<h1>Ryan</h1>
+	
+		<p class="p1" id="player3V1"></p>
+		<p class="p1" id="player3S1"></p>
+		<img class="player_card_img" src="" id="player3C1">
+		<p class="p1" id="player3V2"></p>
+		<p class="p1" id="player3S2"></p>
+		<img class="player_card_img" src="" id="player3C2">
+	
+</div>
+	
+<div id="player_div">
+	
+	<button onclick="cFunction()">Community</button>
+	<br>
+		<p class="p1" id="communityV1"></p>
+		<p class="p1" id="communityS1"></p>
+		<img src="" id="communityC1">
+		<p class="p1" id="communityV2"></p>
+		<p class="p1" id="communityS2"></p>
+		<img src="" id="communityC2">
+		<p class="p1" id="communityV3"></p>
+		<p class="p1" id="communityS3"></p>
+		<img src="" id="communityC3">
+	
+</div>
+
+<div id="player_div">
+	<button onclick="tFunction()">Turn</button>
+	<br>
+		<p class="p1" id="turnV"></p>
+		<p class="p1" id="turnS"></p>
+		<img src="" id="turnC">
+	
+</div>
+
+<div id="player_div">
+	<button onclick="rFunction()">River</button>
+	<br>
+		<p class="p1" id="riverV"></p>
+		<p class="p1" id="riverS"></p>
+		<img src="" id="riverC">
+	
+</div>
+</body>	
+<style type="text/css">
+	#player_div
+	{
+		width: 375px;
+		display: inline-block;
+		margin-bottom: 50px;
+		vertical-align: top;
+		
+	}
+	
+	h1
+	{
+		font-size: 1.5em; 
+		text-align: left;
+		margin: 0;
+		vertical-align: top;
+	}
+
+	.p1
+	{
+		text-align: center;
+		margin-right: 3px;
+		font-size: 1.25em;
+		color: black;
+		display: inline-block;
+		
+	}
+	.p1:hover
+	{
+		text-align: center;
+		margin-right: 3px;
+		font-size: 1.25em;
+		color: black;
+		display: inline-block;
+		
+	}
+	img
+	{
+		width: 100px;
+		height: 150px;
+	}
+	.player_card_img
+	{
+		width: 100px;
+		height: 150px;
+	}
+</style>
+
+<script type="text/javascript">
+
+
+function card_dealer(deck)
+
+{
+	
+	deck = [
+		{
+			value:2,
+			suite:"hearts",
+			img: "2_of_hearts.png"
+		},
+		{
+			value:3,
+			suite:"hearts",
+			img: "3_of_hearts.png"
+		},
+		{
+			value:4,
+			suite:"hearts",
+			img: "4_of_hearts.png"
+		},
+		{
+			value:5,
+			suite:"hearts",
+			img: "5_of_hearts.png"
+		},
+		{
+			value:6,
+			suite:"hearts",
+			img: "6_of_hearts.png"
+		},
+		{
+			value:7,
+			suite:"hearts",
+			img: "7_of_hearts.png"
+		},
+		{
+			value:8,
+			suite:"hearts",
+			img: "8_of_hearts.png"
+		},
+		{
+			value:9,
+			suite:"hearts",
+			img: "9_of_hearts.png"
+		},
+		{
+			value:10,
+			suite:"hearts",
+			img: "10_of_hearts.png"
+		},
+		{
+			value:11,
+			suite:"hearts",
+			img: "jack_of_hearts2.png"
+		},
+		{
+			value:12,
+			suite:"hearts",
+			img: "queen_of_hearts2.png"
+		},
+		{
+			value:13,
+			suite:"hearts",
+			img: "king_of_hearts2.png"
+		},
+		{
+			value:14,
+			suite:"hearts",
+			img: "ace_of_hearts.png"
+		},
+		{
+			value:2,
+			suite:"clubs",
+			img: "2_of_clubs.png"
+		},
+		{
+			value:3,
+			suite:"clubs",
+			img: "3_of_clubs.png"
+		},
+		{
+			value:4,
+			suite:"clubs",
+			img: "4_of_clubs.png"
+		},
+		{
+			value:5,
+			suite:"clubs",
+			img: "5_of_clubs.png"
+		},
+		{
+			value:6,
+			suite:"clubs",
+			img: "6_of_clubs.png"
+		},
+		{
+			value:7,
+			suite:"clubs",
+			img: "7_of_clubs.png"
+		},
+		{
+			value:8,
+			suite:"clubs",
+			img: "8_of_clubs.png"
+		},
+		{
+			value:9,
+			suite:"clubs",
+			img: "9_of_clubs.png"
+		},
+		{
+			value:10,
+			suite:"clubs",
+			img: "10_of_clubs.png"
+		},
+		{
+			value:11,
+			suite:"clubs",
+			img: "jack_of_clubs2.png"
+		},
+		{
+			value:12,
+			suite:"clubs",
+			img: "queen_of_clubs2.png"
+		},
+		{
+			value:13,
+			suite:"clubs",
+			img: "king_of_clubs2.png"
+		},
+		{
+			value:14,
+			suite:"clubs",
+			img: "ace_of_clubs.png"
+		},
+		{
+			value:2,
+			suite:"diamonds",
+			img: "2_of_diamonds.png"
+		},
+		{
+			value:3,
+			suite:"diamonds",
+			img: "3_of_diamonds.png"
+		},
+		{
+			value:4,
+			suite:"diamonds",
+			img: "4_of_diamonds.png"
+		},
+		{
+			value:5,
+			suite:"diamonds",
+			img: "5_of_diamonds.png"
+		},
+		{
+			value:6,
+			suite:"diamonds",
+			img: "6_of_diamonds.png"
+		},
+		{
+			value:7,
+			suite:"diamonds",
+			img: "7_of_diamonds.png"
+		},
+		{
+			value:8,
+			suite:"diamonds",
+			img: "8_of_diamonds.png"
+		},
+		{
+			value: 9,
+			suite:"diamonds",
+			img: "9_of_diamonds.png"
+		},
+		{
+			value:10,
+			suite:"diamonds",
+			img: "10_of_diamonds.png"
+		},
+		{
+			value:11,
+			suite:"diamonds",
+			img: "jack_of_diamonds2.png"
+		},
+		{
+			value:12,
+			suite:"diamonds",
+			img: "queen_of_diamonds2.png"
+		},
+		{
+			value:13,
+			suite:"diamonds",
+			img: "king_of_diamonds2.png"
+		},
+		{
+			value:14,
+			suite:"diamonds",
+			img: "ace_of_diamonds.png"
+		},
+		{
+			value:2,
+			suite:"spades",
+			img: "2_of_spades.png"
+		},
+		{
+			value:3,
+			suite:"spades",
+			img: "3_of_spades.png"
+		},
+		{
+			value:4,
+			suite:"spades",
+			img: "4_of_spades.png"
+		},
+		{
+			value:5,
+			suite:"spades",
+			img: "5_of_spades.png"
+		},
+		{
+			value:6,
+			suite:"spades",
+			img: "6_of_spades.png"
+		},
+		{
+			value:7,
+			suite:"spades",
+			img: "7_of_spades.png"
+		},
+		{
+			value:8,
+			suite:"spades",
+			img: "8_of_spades.png"
+		},
+		{
+			value:9,
+			suite:"spades",
+			img: "9_of_spades.png"
+		},
+		{
+			value:10,
+			suite:"spades",
+			img: "10_of_spades.png"
+		},
+		{
+			value:11,
+			suite:"spades",
+			img: "jack_of_spades2.png"
+		},
+		{
+			value:12,
+			suite:"spades",
+			img: "queen_of_spades2.png"
+		},
+		{
+			value:13,
+			suite:"spades",
+			img: "king_of_spades2.png"
+		},
+		{
+			value:14,
+			suite:"spades",
+			img: "ace_of_spades.png"
+		}
+	];
+
+
+  var i = 0
+    , j = 0
+    , temp = null
+
+  for (i = deck.length - 1; i > 0; i -= 1) {
+    j = Math.floor(Math.random() * (i + 1))
+    temp = deck[i]
+    deck[i] = deck[j]
+    deck[j] = temp
+  }
+	// console.log(deck);
+
+player1 = [deck[0], deck[3]];
+player1S1 = player1[0].suite;
+player1S2 = player1[1].suite;
+player1C1 = player1[0].img;
+player1V1 = player1[0].value;
+player1V2 = player1[1].value;
+player1C2 = player1[1].img;
+// console.log(player1V1,"of", player1S1, "and", player1V2, "of", player1S2);
+player2 = [deck[1], deck[4]];
+player2S1 = player2[0].suite;
+player2S2 = player2[1].suite;
+player2C1 = player2[0].img;
+player2V1 = player2[0].value;
+player2V2 = player2[1].value;
+player2C2 = player2[1].img;
+// console.log(player2V1,"of", player2S1, "and", player2V2, "of", player2S2);
+player3 = [deck[2], deck[5]];
+player3S1 = player3[0].suite;
+player3S2 = player3[1].suite;
+player3C1 = player3[0].img;
+player3V1 = player3[0].value;
+player3V2 = player3[1].value;
+player3C2 = player3[1].img;
+// console.log(player3V1,"of", player3S1, "and", player3V2, "of", player3S2);
+
+
+
+// document.getElementById("player1S1").innerHTML = player1S1;
+// document.getElementById("player1V1").innerHTML = player1V1;
+// document.getElementById("player1S2").innerHTML = player1S2;
+// document.getElementById("player1V2").innerHTML = player1V2;
+
+
+// document.getElementById("player2S1").innerHTML = player2S1;
+// document.getElementById("player2V1").innerHTML = player2V1;
+// document.getElementById("player2S2").innerHTML = player2S2;
+// document.getElementById("player2V2").innerHTML = player2V2;
+
+// document.getElementById("player3S1").innerHTML = player3S1;
+// document.getElementById("player3V1").innerHTML = player3V1;
+document.getElementById("player3C1").src = player3C1;
+// document.getElementById("player3S2").innerHTML = player3S2;
+// document.getElementById("player3V2").innerHTML = player3V2;
+document.getElementById("player3C2").src = player3C2;
+
+dealt_cards = deck.splice(0,7);
+
+console.log("burn one turn three");
+
+
+community = deck.splice (0,3);
+// console.log(community);
+
+communityS1 = community[0].suite;
+communityV1 = community[0].value;
+communityC1 = community[0].img;
+// console.log(communityV1,"of",communityS1);
+communityV2 = community[1].value;
+communityS2 = community[1].suite;
+communityC2 = community[1].img;
+communityV3 = community[2].value;
+communityS3 = community[2].suite;
+communityC3 = community[2].img;
+
+
+// document.getElementById("communityS1").innerHTML = communityS1;
+// document.getElementById("communityV1").innerHTML = communityV1;
+// document.getElementById("communityV2").innerHTML = communityV2;
+// document.getElementById("communityS2").innerHTML = communityS2;
+// document.getElementById("communityV3").innerHTML = communityV3;
+// document.getElementById("communityS3").innerHTML = communityS3;
+	
+
+burn1 = deck.splice(0,1);
+
+console.log("4th Street");
+
+turn = deck.splice(0,1);
+
+turnS = turn[0].suite;
+turnV = turn[0].value;
+turnC = turn[0].img;
+// document.getElementById("turnS").innerHTML = turnS;
+// document.getElementById("turnV").innerHTML = turnV;
+
+
+burn2 = deck.splice(0,1);
+console.log("5th Street");
+
+river = deck.splice(0,1);
+riverS = river[0].suite;
+riverV = river[0].value;
+riverC = river[0].img;
+// document.getElementById("riverS").innerHTML = riverS;
+// document.getElementById("riverV").innerHTML = riverV;
+
+
+player1hand = [player1V1, player1V2, communityV1, communityV2, communityV3, turnV, riverV];
+player1hand_suit = [player1S1, player1S2, communityS1, communityS2, communityS3, turnS, riverS];
+// console.log(player1hand);
+
+player2hand = [player2V1, player2V2, communityV1, communityV2, communityV3, turnV, riverV];
+player2hand_suit = [player2S1, player2S2, communityS1, communityS2, communityS3, turnS, riverS];
+// console.log(player2hand);
+
+player3hand = [player3V1, player3V2, communityV1, communityV2, communityV3, turnV, riverV];
+player3hand_suit = [player3S1, player3S2, communityS1, communityS2, communityS3, turnS, riverS];
+// console.log(player3hand);
+
+player1_diamonds = 0;
+player1_hearts = 0;
+player1_clubs = 0;
+player1_spades = 0;
+
+player2_diamonds = 0;
+player2_hearts = 0;
+player2_clubs = 0;
+player2_spades = 0;
+
+player3_diamonds = 0;
+player3_hearts = 0;
+player3_clubs = 0;
+player3_spades = 0; 
+
+player1_twos = 0;
+player1_threes = 0;
+player1_fours = 0;
+player1_fives = 0;
+player1_sixes = 0;
+player1_sevens = 0;
+player1_eights = 0;
+player1_nines = 0;
+player1_tens = 0;
+player1_jacks = 0;
+player1_queens = 0;
+player1_kings = 0;
+player1_aces = 0;
+
+player2_twos = 0;
+player2_threes = 0;
+player2_fours = 0;
+player2_fives = 0;
+player2_sixes = 0;
+player2_sevens = 0;
+player2_eights = 0;
+player2_nines = 0;
+player2_tens = 0;
+player2_jacks = 0;
+player2_queens = 0;
+player2_kings = 0;
+player2_aces = 0;
+
+player3_twos = 0;
+player3_threes = 0;
+player3_fours = 0;
+player3_fives = 0;
+player3_sixes = 0;
+player3_sevens = 0;
+player3_eights = 0;
+player3_nines = 0;
+player3_tens = 0;
+player3_jacks = 0;
+player3_queens = 0;
+player3_kings = 0;
+player3_aces = 0;
+
+}
+card_dealer();
+
+
+function joshFunction()  {
+	document.getElementById("player1C1").src = player1C1;
+	document.getElementById("player1C2").src = player1C2;
+}
+
+function kenFunction()  {
+	document.getElementById("player2C1").src = player2C1;
+	document.getElementById("player2C2").src = player2C2;
+}
+
+function cFunction()  {
+	document.getElementById("communityC1").src = communityC1;
+	document.getElementById("communityC2").src = communityC2;
+	document.getElementById("communityC3").src = communityC3;
+	console.log("clicked");
+}
+
+function tFunction()  {
+	document.getElementById("turnC").src = turnC;
+	console.log("4th clicked");
+}
+
+function rFunction()  {
+	document.getElementById("riverC").src = riverC;
+	console.log("5th clicked");
+}
+
+console.log(player3hand,"Ryan");
+
+function handFunction() {
+	for (var i = 0; i < player3hand.length; i++){
+		// console.log(player3hand[i]);
+	}		
+}
+handFunction(player3hand);
+
+function suiteFunction()  {
+	for (var k = 0; k < player3hand_suit.length; k++){
+		// console.log(player3hand_suit[k]);
+		if (player3hand_suit[k] == "diamonds"){
+			player3_diamonds++;
+		}
+		if (player3hand_suit[k] == "hearts"){
+			player3_hearts++;
+		}
+		if (player3hand_suit[k] == "clubs"){
+			player3_clubs++;
+		}
+		if (player3hand_suit[k] == "spades"){
+			player3_spades++;
+		}
+
+	}
+	for (var j = 0; j < player1hand_suit.length; j++){
+		// console.log(player1hand_suit[j]);
+		if (player1hand_suit[j] == "diamonds"){
+			player1_diamonds++;
+		}
+		if (player1hand_suit[j] == "hearts"){
+			player1_hearts++;
+		}
+		if (player1hand_suit[j] == "clubs"){
+			player1_clubs++;
+		}
+		if (player1hand_suit[j] == "spades"){
+			player1_spades++;
+		}
+
+	}
+	for (var x = 0; x < player2hand_suit.length; x++){
+		// console.log(player2hand_suit[x]);
+		if (player2hand_suit[x] == "diamonds"){
+			player2_diamonds++;
+		}
+		if (player2hand_suit[x] == "hearts"){
+			player2_hearts++;
+		}
+		if (player2hand_suit[x] == "clubs"){
+			player2_clubs++;
+		}
+		if (player2hand_suit[x] == "spades"){
+			player2_spades++;
+		}
+
+	}
+// console.log(player1_diamonds,"Josh diamonds");
+// console.log(player1_hearts,"hearts");
+// console.log(player1_clubs,"clubs");
+// console.log(player1_spades,"spades");
+
+// console.log(player2_diamonds,"Kendall diamonds");
+// console.log(player2_hearts,"hearts");
+// console.log(player2_clubs,"clubs");
+// console.log(player2_spades,"spades");
+
+// console.log(player3_diamonds,"Ryan diamonds");
+// console.log(player3_hearts,"hearts");
+// console.log(player3_clubs,"clubs");
+// console.log(player3_spades,"spades");
+
+	if (player1_diamonds > 4){
+		console.log('diamond flush for Josh!')
+	}
+	if (player1_hearts > 4){
+		console.log('heart flush for Josh!')
+	}
+	if (player1_clubs > 4){
+		console.log('club flush for Josh!')
+	}
+	if (player1_spades > 4){
+		console.log('spade flush for Josh!')
+	}
+	
+	if (player2_diamonds > 4){
+		console.log('diamond flush for Kendal!')
+	}
+	if (player2_hearts > 4){
+		console.log('heart flush for Kendal!')
+	}
+	if (player2_clubs > 4){
+		console.log('club flush for Kendal!')
+	}
+	if (player2_spades > 4){
+		console.log('spade flush for Kendal!')
+	
+	}
+	if (player3_diamonds > 4){
+		console.log('diamond flush for Ryan!')
+	}
+	if (player3_hearts > 4){
+		console.log('heart flush for Ryan!')
+	}
+	if (player3_clubs > 4){
+		console.log('club flush for Ryan!')
+	}
+	if (player3_spades > 4){
+		console.log('spade flush for Ryan!')
+	}
+}
+suiteFunction();
+
+function straight_checkerFunction(){
+	for (i = 0;  i < player1hand.length; i++){
+		if (player1hand[i] == 2){
+			player1_twos++;
+		}
+		if (player1hand[i] == 3){
+			player1_threes++;
+		}
+		if (player1hand[i] == 4){
+			player1_fours++;
+		}
+		if (player1hand[i] == 5){
+			player1_fives++;
+		}
+		if (player1hand[i] == 6){
+			player1_sixes++;
+		}
+		if (player1hand[i] == 7){
+			player1_sevens++;
+		}
+		if (player1hand[i] == 8){
+			player1_eights++;
+		}
+		if (player1hand[i] == 9){
+			player1_nines++;
+		}
+		if (player1hand[i] == 10){
+			player1_tens++;
+		}
+		if (player1hand[i] == 11){
+			player1_jacks++;
+		}
+		if (player1hand[i] == 12){
+			player1_queens++;
+		}
+		if (player1hand[i] == 13){
+			player1_kings++;
+		}
+		if (player1hand[i] == 14){
+			player1_aces++;
+		}
+
+		
+	}
+	for (j = 0;  j < player2hand.length; j++){
+		if (player2hand[j] == 2){
+			player2_twos++;
+		}
+		if (player2hand[j] == 3){
+			player2_threes++;
+		}
+		if (player2hand[j] == 4){
+			player2_fours++;
+		}
+		if (player2hand[j] == 5){
+			player2_fives++;
+		}
+		if (player2hand[j] == 6){
+			player2_sixes++;
+		}
+		if (player2hand[j] == 7){
+			player2_sevens++;
+		}
+		if (player2hand[j] == 8){
+			player2_eights++;
+		}
+		if (player2hand[j] == 9){
+			player2_nines++;
+		}
+		if (player2hand[j] == 10){
+			player2_tens++;
+		}
+		if (player2hand[j] == 11){
+			player2_jacks++;
+		}
+		if (player2hand[j] == 12){
+			player2_queens++;
+		}
+		if (player2hand[j] == 13){
+			player2_kings++;
+		}
+		if (player2hand[j] == 14){
+			player2_aces++;
+		}
+
+		
+	}
+	for (k = 0;  k < player3hand.length; k++){
+		if (player3hand[k] == 2){
+			player3_twos++;
+		}
+		if (player3hand[k] == 3){
+			player3_threes++;
+		}
+		if (player3hand[k] == 4){
+			player3_fours++;
+		}
+		if (player3hand[k] == 5){
+			player3_fives++;
+		}
+		if (player3hand[k] == 6){
+			player3_sixes++;
+		}
+		if (player3hand[k] == 7){
+			player3_sevens++;
+		}
+		if (player3hand[k] == 8){
+			player3_eights++;
+		}
+		if (player3hand[k] == 9){
+			player3_nines++;
+		}
+		if (player3hand[k] == 10){
+			player3_tens++;
+		}
+		if (player3hand[k] == 11){
+			player3_jacks++;
+		}
+		if (player3hand[k] == 12){
+			player3_queens++;
+		}
+		if (player3hand[k] == 13){
+			player3_kings++;
+		}
+		if (player3hand[k] == 14){
+			player3_aces++;
+		}
+
+		
+	}
+	console.log("Josh  ", player1_twos, player1_threes, player1_fours, player1_fives, player1_sixes, player1_sevens, player1_eights, player1_nines, player1_tens, player1_jacks, player1_queens, player1_kings, player1_aces);
+
+	console.log("Kendal", player2_twos, player2_threes, player2_fours, player2_fives, player2_sixes, player2_sevens, player2_eights, player2_nines, player2_tens, player2_jacks, player2_queens, player2_kings, player2_aces);
+
+	console.log("Ryan  ", player3_twos, player3_threes, player3_fours, player3_fives, player3_sixes, player3_sevens, player3_eights, player3_nines, player3_tens, player3_jacks, player3_queens, player3_kings, player3_aces);
+
+	if (player3_twos > 0 && player3_threes > 0 && player3_fours > 0 && player3_fives > 0 && player3_aces > 0){
+		console.log("5 high straight for Ryan!");
+	}
+	if (player3_twos > 0 && player3_threes > 0 && player3_fours > 0 && player3_fives > 0 && player3_sixes > 0){
+		console.log("6 high straight for Ryan!");
+	}
+	if (player3_sevens > 0 && player3_threes > 0 && player3_fours > 0 && player3_fives > 0 && player3_sixes > 0){
+		console.log("7 high straight for Ryan!");
+	}
+	if (player3_sevens > 0 && player3_eights > 0 && player3_fours > 0 && player3_fives > 0 && player3_sixes > 0){
+		console.log("8 high straight for Ryan!");
+	}
+	if (player3_sevens > 0 && player3_eights > 0 && player3_nines > 0 && player3_fives > 0 && player3_sixes > 0){
+		console.log("9 high straight for Ryan!");
+	}
+	if (player3_sevens > 0 && player3_eights > 0 && player3_nines > 0 && player3_tens > 0 && player3_sixes > 0){
+		console.log("10 high straight for Ryan!");
+	}
+	if (player3_sevens > 0 && player3_eights > 0 && player3_nines > 0 && player3_tens > 0 && player3_jacks > 0){
+		console.log("Jack high straight for Ryan!");
+	}
+	if (player3_queens > 0 && player3_eights > 0 && player3_nines > 0 && player3_tens > 0 && player3_jacks > 0){
+		console.log("Queen high straight for Ryan!");
+	}
+	if (player3_queens > 0 && player3_kings > 0 && player3_nines > 0 && player3_tens > 0 && player3_jacks > 0){
+		console.log("King high straight for Ryan!");
+	}
+	if (player3_queens > 0 && player3_kings > 0 && player3_aces > 0 && player3_tens > 0 && player3_jacks > 0){
+		console.log("Ace high straight for Ryan!");
+	}
+
+	if (player2_twos > 0 && player2_threes > 0 && player2_fours > 0 && player2_fives > 0 && player2_aces > 0){
+		console.log("5 high straight for Kendal!");
+	}
+	if (player2_twos > 0 && player2_threes > 0 && player2_fours > 0 && player2_fives > 0 && player2_sixes > 0){
+		console.log("6 high straight for Kendal!");
+	}
+	if (player2_sevens > 0 && player2_threes > 0 && player2_fours > 0 && player2_fives > 0 && player2_sixes > 0){
+		console.log("7 high straight for Kendal!");
+	}
+	if (player2_sevens > 0 && player2_eights > 0 && player2_fours > 0 && player2_fives > 0 && player2_sixes > 0){
+		console.log("8 high straight for Kendal!");
+	}
+	if (player2_sevens > 0 && player2_eights > 0 && player2_nines > 0 && player2_fives > 0 && player2_sixes > 0){
+		console.log("9 high straight for Kendal!");
+	}
+	if (player2_sevens > 0 && player2_eights > 0 && player2_nines > 0 && player2_tens > 0 && player2_sixes > 0){
+		console.log("10 high straight for Kendal!");
+	}
+	if (player2_sevens > 0 && player2_eights > 0 && player2_nines > 0 && player2_tens > 0 && player2_jacks > 0){
+		console.log("Jack high straight for Kendal!");
+	}
+	if (player2_queens > 0 && player2_eights > 0 && player2_nines > 0 && player2_tens > 0 && player2_jacks > 0){
+		console.log("Queen high straight for Kendal!");
+	}
+	if (player2_queens > 0 && player2_kings > 0 && player2_nines > 0 && player2_tens > 0 && player2_jacks > 0){
+		console.log("King high straight for Kendal!");
+	}
+	if (player2_queens > 0 && player2_kings > 0 && player2_aces > 0 && player2_tens > 0 && player2_jacks > 0){
+		console.log("Ace high straight for Kendal!");
+	}
+
+	if (player1_twos > 0 && player1_threes > 0 && player1_fours > 0 && player1_fives > 0 && player1_aces > 0){
+		console.log("5 high straight for Josh!");
+	}
+	if (player1_twos > 0 && player1_threes > 0 && player1_fours > 0 && player1_fives > 0 && player1_sixes > 0){
+		console.log("6 high straight for Josh!");
+	}
+	if (player1_sevens > 0 && player1_threes > 0 && player1_fours > 0 && player1_fives > 0 && player1_sixes > 0){
+		console.log("7 high straight for Josh!");
+	}
+	if (player1_sevens > 0 && player1_eights > 0 && player1_fours > 0 && player1_fives > 0 && player1_sixes > 0){
+		console.log("8 high straight for Josh!");
+	}
+	if (player1_sevens > 0 && player1_eights > 0 && player1_nines > 0 && player1_fives > 0 && player1_sixes > 0){
+		console.log("9 high straight for Josh!");
+	}
+	if (player1_sevens > 0 && player1_eights > 0 && player1_nines > 0 && player1_tens > 0 && player1_sixes > 0){
+		console.log("10 high straight for Josh!");
+	}
+	if (player1_sevens > 0 && player1_eights > 0 && player1_nines > 0 && player1_tens > 0 && player1_jacks > 0){
+		console.log("Jack high straight for Josh!");
+	}
+	if (player1_queens > 0 && player1_eights > 0 && player1_nines > 0 && player1_tens > 0 && player1_jacks > 0){
+		console.log("Queen high straight for Josh!");
+	}
+	if (player1_queens > 0 && player1_kings > 0 && player1_nines > 0 && player1_tens > 0 && player1_jacks > 0){
+		console.log("King high straight for Josh!");
+	}
+	if (player1_queens > 0 && player1_kings > 0 && player1_aces > 0 && player1_tens > 0 && player1_jacks > 0){
+		console.log("Ace high straight for Josh!");
+	}
+
+	if (player1_aces == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_aces == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_aces == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_kings == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_kings == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_kings == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_queens == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_queens == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_queens == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_jacks == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_jacks == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_jacks == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_tens == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_tens == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_tens == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_nines == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_nines == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_nines == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_eights == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_eights == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_eights == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_sevens == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_sevens == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_sevens == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_sixes == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_sixes == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_sixes == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_fives == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_fives == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_fives == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_fours == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_fours == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_fours == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_threes == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_threes == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_threes == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_twos == 4){
+		console.log("4 of a kind for player1!");
+	}
+	if (player2_twos == 4){
+		console.log("4 of a kind for player2!");
+	}
+	if (player3_twos == 4){
+		console.log("4 of a kind for player3!");
+	}
+	if (player1_aces == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_aces == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_aces == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_kings == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_kings == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_kings == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_queens == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_queens == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_queens == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_jacks == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_jacks == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_jacks == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_tens == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_tens == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_tens == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_nines == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_nines == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_nines == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_eights == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_eights == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_eights == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_sevens == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_sevens == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_sevens == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_sixes == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_sixes == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_sixes == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_fives == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_fives == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_fives == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_fours == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_fours == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_fours == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_threes == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_threes == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_threes == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_twos == 3){
+		console.log("3 of a kind for player1!");
+	}
+	if (player2_twos == 3){
+		console.log("3 of a kind for player2!");
+	}
+	if (player3_twos == 3){
+		console.log("3 of a kind for player3!");
+	}
+	if (player1_aces == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_aces == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_aces == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_kings == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_kings == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_kings == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_queens == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_queens == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_queens == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_jacks == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_jacks == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_jacks == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_tens == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_tens == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_tens == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_nines == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_nines == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_nines == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_eights == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_eights == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_eights == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_sevens == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_sevens == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_sevens == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_sixes == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_sixes == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_sixes == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_fives == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_fives == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_fives == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_fours == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_fours == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_fours == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_threes == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_threes == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_threes == 2){
+		console.log("A pair for player3!");
+	}
+	if (player1_twos == 2){
+		console.log("A pair for player1!");
+	}
+	if (player2_twos == 2){
+		console.log("A pair for player2!");
+	}
+	if (player3_twos == 2){
+		console.log("A pair for player3!");
+	}
+
+
+
+}
+straight_checkerFunction();
+
+</script>
+
+
+</html>

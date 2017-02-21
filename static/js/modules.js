@@ -5,22 +5,8 @@ app.config(function($routeProvider){
 	.when('/', {
 		controller: 'HomeController',
 		controllerAs: 'homeCtrl',
-		templateUrl: '/partials/frontpage.partial.html'
+		templateUrl: '/'
 	})
 
-	.when('/discover', {
-		controller: 'ProductsController',
-		controllerAs: 'productsCtrl',
-		templateUrl: '/partials/discover.partial.html'
-	})
-	.when('/celebrate', {
-		controller: 'ProductsController',
-		controllerAs: 'productsCtrl',
-		templateUrl: '/partials/celebrate.partial.html'
-	})
-	.when('/support', {
-		controller: 'ProductsController',
-		controllerAs: 'productsCtrl',
-		templateUrl: '/partials/support.partial.html'
-	})
+	
 });

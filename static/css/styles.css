@@ -1,326 +1,121 @@
 @media screen and (min-width: 0px){
-    *
-    {
-        padding: 0;
-        margin: 0;
-        /*border: 1px dotted blue;*/
-    }
-    body
-    {
-    	background-color: #8eaebd;
-    }
-    #header_div
-    {
-        width: 100%;
-        height: 90px;
-        /*border-bottom: 1px solid green;*/
-        display: block;
-        background-color: white;
-    }
-    #menu_stack
-    {
-    	width: 5%;
-    	margin: 3% 0 0 3%;
-    }
-    #krista_div
-    {
-    	width: 100%;
-    	height: 100%;
-        background-color: 	#FAFAD2;
-        display: block;
-        
-	}
-	#krista_p
-	{
-		font-family: 'Lato', serif;
-		text-align: center;
-		color: grey;
-		font-size: 1.5em;
-		/*margin: 0 0 3% 0;	*/
-	}
-	#job_p
-	{
-		font-family: 'Lato', serif;
-		text-align: center;
-		color: black;
-		font-size: 1em;
-	}
-	#ul_div
-	{
-		display: inline-block;
-		width: 50%;
-		margin-left: 3%;
-		vertical-align: top;
-		visibility: hidden;
-	}
-	#header_ul
-	{
-		display: inline-block;
-		width: 100%;
-		padding-top: 5%;
-	}
-	#header_li
-	{
-		display: inline;
-		font-family: 'Lato', serif;
-		text-align: center;
-		color: black;
-		font-size: 1em;
-		margin: 5%;
-	}
-	#beach
-	{
-		width: 100%;
-		height:  330px;
-		/*border: 1px dashed blue;*/
-		background-image: url("/img/bw.jpeg");
-		background-repeat: no-repeat;
-	}
-	#inner_beach1
-	{
-		width: 80%;
-		/*height: 330px;*/
-		opacity: .99;
-		/*border: 1px solid gold;*/
-		margin: auto;
-		/*background-color: white;*/
-		/*display: inline-block;*/
-		
-		
-	}
-	#beach_h1
-	{
-		font-family: 'Lato', serif;
-		text-align: center;
-		color: white;
-		font-size: 1.75em;
-		display: inline-block;
-		margin-top: 20%;
-	}
-	#second_section
-	{
-		width: 50%;
-		height: 100%;
-		/*display: inline-block;*/
-		background-color: 	#FAFAD2;
 
-	}
-	#head_shot
+	#player_div
 	{
-		width: 50%;
+		width: 500px;
 		display: inline-block;
-		
-
-	}
-	#inner_second
-	{
+		margin-bottom: 25px;
 		vertical-align: top;
-		display: inline-block;
-	}
-	#lower_p
-	{
-		font-family: 'Lato', serif;
-		font-size: 1em;
-		color: grey;
-		display: inline-block;
-		text-align: center;
 		
 	}
-	#twitter
+	img
 	{
-		visibility: hidden;
-		width: 0px;
+		width: 200px;
+		height: 300px;
 	}
-	#bw_pic
+	.player_card_img
 	{
-		width: 100%;
+		width: 200px;
+		height: 300px;
 	}
-	
-	#new_h3
-	{
-		font-family: 'Lato', serif;
-		font-size: 1em;
-		color: #FAFAD2;
-		text-align: center;
-		margin-top: 15%; 
-	}
-	#head_shot2
-	{
-		margin-top: 0;
-		margin-left: 0;
-		width: 10%;
-		display: inline-block;
-		margin-left: 45%;
-	}
-	#head2p
-	{
-		font-family: 'Lato', serif;
-		font-size: .6em;
-		color: white;
-		text-align: left;
-		vertical-align: top;
-		/*margin-top: 3%;*/
-	}
-}
+    
 
 @media screen and (min-width: 481px){
+
+	#player_div
+	{
+		width: 375px;
+		display: inline-block;
+		margin-bottom: 50px;
+		vertical-align: top;
+		
+	}
+	
+	h1
+	{
+		font-size: 1.5em; 
+		text-align: left;
+		margin: 0;
+		vertical-align: top;
+	}
+
+	.p1
+	{
+		text-align: center;
+		margin-right: 3px;
+		font-size: 1.25em;
+		color: black;
+		display: inline-block;
+		
+	}
+	.p1:hover
+	{
+		text-align: center;
+		margin-right: 3px;
+		font-size: 1.25em;
+		color: black;
+		display: inline-block;
+		
+	}
+	img
+	{
+		width: 100px;
+		height: 150px;
+	}
+	.player_card_img
+	{
+		width: 100px;
+		height: 150px;
+	}
    
 }
 
 @media screen and (min-width: 1024px){
 
-	*
-    {
-        padding: 0;
-        margin: 0;
-        /*border: 1px dotted blue;*/
-    }
-	body
+	#player_div
 	{
-		margin:  1% 10% 5% 10%;
-		background-color: lightgrey;
-	}
-	#krista_div
-    {
-    	width: 15%;
-    	height: 100%;
-        background-color: 	#FAFAD2;
-        /*margin-left: 20%;*/
-        display: inline-block;
-	}
-	#krista_p
-	{
-		font-family: 'Lato', serif;
-		text-align: center;
-		color: grey;
-		font-size: 1.5em;
-	}
-	#header_div
-    {
-        width: 100%;
-        height: 100px;
-        background-color: #8eaebd;
-    }
-
-    #ul_div
-	{
+		width: 375px;
 		display: inline-block;
-		width: 75%;
-		margin-left: 1%;
+		margin-bottom: 50px;
 		vertical-align: top;
-		visibility: visible;
-	}
-	#beach
-	{
-		width: 100%;
-		height:  660px;
-		/*border: 1px dashed blue;*/
-		background-image: url("/img/bw.jpeg");
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	 #menu_stack
-    {
-    	visibility: hidden;
-    	margin: 0;
-    }
-    #inner_beach1
-	{
-		opacity: .99;
-		margin: auto;	
-	}
-	#beach_h1
-	{
-		font-family: 'Lato', serif;
-		text-align: center;
-		color: snow;
-		font-size: 3.1em;
-		display: inline-block;
-		text-shadow: 2px 2px 2px black;
-	}
-	#second_section
-	{
-		width: 100%;
-		display: inline-block;
-		background-color: 	#FAFAD2;
-
-	}
-	#inner_second
-	{
-		width: 50%;
-		display: inline-block;
-		vertical-align: top;
-	}
-	#head_shot
-	{
 		
-		border: none;
-		width: 20%;
-		margin: 0px;
-		padding: 0px;
-	}
-	#lower_p
-	{
-		font-family: 'Lato', serif;
-		font-size: 2.5em;
-		margin-top: 5%;
-		color: #8eaebd;
-		display: inline-block;
-		vertical-align: top;
-		text-align: center;
 	}
 	
-	#bw_pic
+	h1
 	{
-		width: 100%;
+		font-size: 1.5em; 
+		text-align: left;
+		margin: 0;
+		vertical-align: top;
 	}
-	#bottom_yellow
-	{
-		background-color: #FAFAD2;
-		width: 100%;
-		height: 116px;
-		margin-top: 3%;
-	}
-	#new_h3
-	{
-		font-family: 'Lato', serif;
-		font-size: 3em;
-		/*color: #FAFAD2;*/
-		color: white;
-		text-align: center;
-		margin-top: 5%;
 
+	.p1
+	{
+		text-align: center;
+		margin-right: 3px;
+		font-size: 1.25em;
+		color: black;
+		display: inline-block;
 		
 	}
-	#bottom_blue
+	.p1:hover
 	{
-		width: 50%;
-		margin: auto;
-		background-color: grey;
-		vertical-align: top;
-	}
-	#head_shot2
-	{
-		margin-top: 0;
-		margin-left: 0;
-		width: 5%;
-		display: inline-block;
-		margin-left: 47.5%;
-	}
-	#head2p
-	{
-		font-family: 'Lato', serif;
+		text-align: center;
+		margin-right: 3px;
 		font-size: 1.25em;
-		color: #8eaebd;
+		color: black;
 		display: inline-block;
-		vertical-align: top;
-		margin-top: 5%;
+		
 	}
-	#section2
+	img
 	{
-		width: 14%;
-		background-image: url("/img/krista1.JPG");
-		height: 236px;
+		width: 100px;
+		height: 150px;
+	}
+	.player_card_img
+	{
+		width: 100px;
+		height: 150px;
 	}
 
    

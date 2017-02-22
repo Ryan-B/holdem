@@ -1,12 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+   <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+	<link rel="apple-touch-icon" href="icon-152.png">
+	<!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="196x196" href="icon-196.png">
+	<title>O-Town Texas Hold'em</title>
+	<script type="text/javascript" src="/js/lib/angular.js"></script>
+	<script type="text/javascript" src="/js/lib/angular-routes.js"></script>
+	<script type="text/javascript" src="/js/modules.js"></script>
+  	<script type="text/javascript" src="/js/factories.factory.js"></script>
+  	<script type="text/javascript" src="/js/controllers.ctrl.js"></script>
+  	<script type="text/javascript" src="/js/directives.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery.timer.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDID0IdgJbWuQcDqJtaEwZbl9CHe92g-sQ"></script>
+	
+	
+	</head>
+
+
+
 <body>
 	<div id="player_div">
 	<h1>Josh</h1>
-		<p class="p1" id="player1V1"></p>
-		<p class="p1" id="player1S1"></p>
+		<!-- <p class="p1" id="player1V1"></p>
+		<p class="p1" id="player1S1"></p> -->
 		<img class="player_card_img" src="" id="player1C1">
-		<p class="p1" id="player1V2"></p>
-		<p class="p1" id="player1S2"></p>
+		<!-- <p class="p1" id="player1V2"></p>
+		<p class="p1" id="player1S2"></p> -->
 		<img class="player_card_img" src="" id="player1C2">
 	<button onclick="joshFunction()">Show</button>
 	
@@ -15,11 +44,11 @@
 <div id="player_div">
 	<h1>Kendal</h1>
 	
-		<p class="p1" id="player2V1"></p>
-		<p class="p1" id="player2S1"></p>
+		<!-- <p class="p1" id="player2V1"></p>
+		<p class="p1" id="player2S1"></p> -->
 		<img class="player_card_img" src="" id="player2C1">
-		<p class="p1" id="player2V2"></p>
-		<p class="p1" id="player2S2"></p>
+		<!-- <p class="p1" id="player2V2"></p>
+		<p class="p1" id="player2S2"></p> -->
 		<img class="player_card_img" src="" id="player2C2">
 	<button onclick="kenFunction()">Show</button>
 </div>
@@ -27,11 +56,11 @@
 <div id="player_div">
 	<h1>Ryan</h1>
 	
-		<p class="p1" id="player3V1"></p>
-		<p class="p1" id="player3S1"></p>
+		<!-- <p class="p1" id="player3V1"></p>
+		<p class="p1" id="player3S1"></p> -->
 		<img class="player_card_img" src="" id="player3C1">
-		<p class="p1" id="player3V2"></p>
-		<p class="p1" id="player3S2"></p>
+		<!-- <p class="p1" id="player3V2"></p>
+		<p class="p1" id="player3S2"></p> -->
 		<img class="player_card_img" src="" id="player3C2">
 	
 </div>
@@ -40,14 +69,14 @@
 	
 	<button onclick="cFunction()">Community</button>
 	<br>
-		<p class="p1" id="communityV1"></p>
-		<p class="p1" id="communityS1"></p>
+		<!-- <p class="p1" id="communityV1"></p>
+		<p class="p1" id="communityS1"></p> -->
 		<img src="" id="communityC1">
-		<p class="p1" id="communityV2"></p>
-		<p class="p1" id="communityS2"></p>
+		<!-- <p class="p1" id="communityV2"></p>
+		<p class="p1" id="communityS2"></p> -->
 		<img src="" id="communityC2">
-		<p class="p1" id="communityV3"></p>
-		<p class="p1" id="communityS3"></p>
+		<!-- <p class="p1" id="communityV3"></p>
+		<p class="p1" id="communityS3"></p> -->
 		<img src="" id="communityC3">
 	
 </div>
@@ -55,8 +84,8 @@
 <div id="player_div">
 	<button onclick="tFunction()">Turn</button>
 	<br>
-		<p class="p1" id="turnV"></p>
-		<p class="p1" id="turnS"></p>
+		<!-- <p class="p1" id="turnV"></p>
+		<p class="p1" id="turnS"></p> -->
 		<img src="" id="turnC">
 	
 </div>
@@ -64,139 +93,13 @@
 <div id="player_div">
 	<button onclick="rFunction()">Rivers</button>
 	<br>
-		<p class="p1" id="riverV"></p>
-		<p class="p1" id="riverS"></p>
+		<!-- <p class="p1" id="riverV"></p>
+		<p class="p1" id="riverS"></p> -->
 		<img src="" id="riverC">
 	
 </div>
 </body>	 
-<style type="text/css">
-	
-	@media screen and (min-width: 0px){
 
-	#player_div
-	{
-		width: 375px;
-		display: inline-block;
-		margin-bottom: 25px;
-		vertical-align: top;
-		
-	}
-	img
-	{
-		width: 200px;
-		height: 300px;
-	}
-	.player_card_img
-	{
-		width: 200px;
-		height: 300px;
-	}
-    
-}
-
-@media screen and (min-width: 481px){
-
-	#player_div
-	{
-		width: 375px;
-		display: inline-block;
-		margin-bottom: 50px;
-		vertical-align: top;
-		
-	}
-	
-	h1
-	{
-		font-size: 1.5em; 
-		text-align: left;
-		margin: 0;
-		vertical-align: top;
-	}
-
-	.p1
-	{
-		text-align: center;
-		margin-right: 3px;
-		font-size: 1.25em;
-		color: black;
-		display: inline-block;
-		
-	}
-	.p1:hover
-	{
-		text-align: center;
-		margin-right: 3px;
-		font-size: 1.25em;
-		color: black;
-		display: inline-block;
-		
-	}
-	img
-	{
-		width: 100px;
-		height: 150px;
-	}
-	.player_card_img
-	{
-		width: 100px;
-		height: 150px;
-	}
-   
-}
-
-@media screen and (min-width: 1024px){
-
-	#player_div
-	{
-		width: 375px;
-		display: inline-block;
-		margin-bottom: 50px;
-		vertical-align: top;
-		
-	}
-	
-	h1
-	{
-		font-size: 1.5em; 
-		text-align: left;
-		margin: 0;
-		vertical-align: top;
-	}
-
-	.p1
-	{
-		text-align: center;
-		margin-right: 3px;
-		font-size: 1.25em;
-		color: black;
-		display: inline-block;
-		
-	}
-	.p1:hover
-	{
-		text-align: center;
-		margin-right: 3px;
-		font-size: 1.25em;
-		color: black;
-		display: inline-block;
-		
-	}
-	img
-	{
-		width: 100px;
-		height: 150px;
-	}
-	.player_card_img
-	{
-		width: 100px;
-		height: 150px;
-	}
-
-   
-}
-
-</style>
 
 <script type="text/javascript">
 

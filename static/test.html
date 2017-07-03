@@ -21,6 +21,7 @@
 
 	function Threefive() {
 		sum = 0;
+		
 		for (i=100; i <= 4000000; i++) {
 			if ( (i % 3 == 0 )||(i % 5 == 0) ) {
 				
@@ -28,10 +29,12 @@
 					continue;
 				}
 				sum = sum + i;
+				
 			}
 			
 		}
 		console.log(sum);
+		
 	}
 	Threefive();
 
@@ -104,19 +107,108 @@
 
 
 	function noNegs(arr) {
-		for(i=0;i<arr.length;i++){
-			if(arr[i] < 0) {
-				arr[arr.length-1] = arr[i];
-				arr.pop();
-			}
-		}
-			
+		 var neg_counter = 0;
+
+    // filter array
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {arr[neg_counter++] = arr[i];}
+    }
+
+    // pop excess elements
+    while (neg_counter < arr.length) {
+
+    	arr.pop();
+	}	
 		
 		console.log(arr,"hi");
 	}
 	noNegs([-5,6,8,10,-1,4,5,6,-22,-10]);
 
 
+function makeitSwitch(arr) {
+	for (var i = arr.length - 1; i >= arr.length/2; i--) {
+		temp = arr[i];
+		arr[i] = arr[arr.length - i -1];
+		arr[arr.length - i -1] = temp;
+	}
+	console.log(arr);
+
+}
+makeitSwitch([3,2,1]);
+
+
+
+function negRemove(arr) {
+	var negs = 0;
+	for (i=0; i < arr.length; i++) {
+		if(arr[i] >= 0) {
+			arr[negs++] = arr[i];
+		}
+	}
+	while (negs < arr.length) {
+		arr.pop();
+	}
+	console.log(arr);
+}
+negRemove([4,5,-9,-6,45,-69]);
+
+
+
+function noNeggas(arr){
+	var negs = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] >= 0) {
+			arr[negs++] = arr[i];
+		}
+	}
+	while (negs < arr.length) {
+		arr.pop();
+	}
+	console.log(arr);
+}
+noNeggas([-2,-6,6,5,-3]);
+
+function neggaTwo(arr) {
+	var count = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] >= 0) {
+			arr[count++] = arr[i];
+		}
+	}
+	while (count < arr.length){
+		arr.pop();
+	}
+	console.log(arr);
+}
+neggaTwo([3,4,-5,-5,3])
+
+
+
+
+function makeitSwitch2(arr) {
+	for (var i = arr.length - 1; i >= arr.length/2; i--) {
+		temp = arr[i];
+		arr[i] = arr[arr.length - i -1];
+		arr[arr.length - i -1] = temp;
+	}
+	console.log(arr);
+}
+makeitSwitch2(["Dawgs","Go","Lets"]);
+
+
+
+
+
+
+function proveSwitch(arr) {
+	for (var i = arr.length - 1; i >= arr.length/2; i--) {
+		temp = arr[i];
+		arr[i] = arr[arr.length - i -1];
+		arr[arr.length -i -1] = temp;
+	};
+	console.log(arr);
+}
+proveSwitch([1,2,3]);
 
 
 
@@ -126,11 +218,191 @@
 
 
 
+function switchy1(arr) {
+	
+	for (var i = arr.length - 1; i >= arr.length/2; i--) {
+		temp = arr[i];
+		arr[i] = arr[arr.length - i - 1];
+		arr[arr.length- i - 1] = temp;
+	}
+	console.log(arr);
+}
+switchy1(["Dawgs","GO", "Lets"]);
+
+function neggaThree(arr) {
+	var counts = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] >= 0) {
+			arr[counts++] = arr[i];
+		}
+	}
+	while(counts < arr.length){
+		arr.pop();
+	}
+	console.log(arr);
+}
+neggaThree([3,2,1,-9,8,4,-4]);
+
+function switchers(arr) {
+	var temp;
+
+	for (var i = arr.length - 1; i >= arr.length/2; i--) {
+		temp = arr[i];
+		arr[i] = arr[arr.length - i -1];
+		arr[arr.length - i -1] = temp;
+	}
+	console.log(arr);
+}
+switchers([5,4,3,2,1]);
+
+function noNeggas2(arr){
+	var cnt = 0;
+
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] >= 0) {
+			arr[cnt++] = arr[i];
+		}
+
+	}
+	while(cnt < arr.length){
+		arr.pop();
+	}
+	console.log(arr);
+}
+noNeggas2([3,4,5,-6,-7,6,-7]);
 
 
 
 
 
 
+
+function switch33(arr) {
+	var temp;
+
+	for (var i = arr.length - 1; i >= arr.length/2; i--) {
+		temp = arr[i];
+		arr[i]= arr[arr.length -i -1];
+		arr[arr.length-i -1] = temp;
+	};
+	console.log(arr);
+}
+switch33([4,3,2,1,]);
+
+function noNeggas3(arr){
+	var c = 0;
+
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] >=0) {
+			arr[c++] = arr[i];
+		}
+	}
+	while( c < arr.length){
+		arr.pop()
+	}
+	console.log(arr);
+}
+noNeggas3([3,4,5,-6,-7,3]);
+
+
+function binarySearch(arr, n) {
+	var start = 0;
+	var end  = arr.length;
+	while(end > start) {
+		var mid = Math.floor(
+			(start + end) / 2);
+		if (n > arr[mid]) {
+			start = mid + 1;
+		}
+		else if (n < arr[mid]) {
+			end = mid;
+		}
+		else {console.log("true"); return true;}
+		
+		
+	}
+		console.log('false'); return false;
+}
+binarySearch([1,2,3], 1);
+
+function binarySearch1(arr, n) {
+	var start = 0;
+	var end = arr.length;
+	while(end > start) {
+		var mid = Math.floor(
+			(start + end) /2);
+
+		if (n > arr[mid]) {
+			start = mid +1;
+		}
+		else if (n < arr[mid]) {
+			end = mid;
+		}
+		else {console.log("trizzue"); return true;}
+	}
+	console.log("false"); return false;
+}
+binarySearch1(["GO", "Dawgs"], "Dawgs");
+
+
+function binarySearch2(arr, n) {
+	var start = 0;
+	var end = arr.length;
+	while (end > start) {
+		var mid = Math.floor(
+			(start + end) /2);
+	
+		if (n > arr[mid]) {
+			start = mid + 1;
+		}
+		else if (n < arr[mid]) {
+			end = mid;
+		}
+		else { console.log("Truus"); return true};
+	}
+	console.log("fizzalze"); return false
+
+}
+
+binarySearch2([1,3,5,7,9], 9 )
+
+function binarySearch3(arr, val){
+	var start = 0;
+	var end = arr.length;
+
+	while(end > start) {
+		var mid = Math.floor((start + end) /2);
+
+		if (val > arr[mid]) {
+			start = mid + 1;
+		}
+		else if (val < arr[mid]) {
+			end = mid;
+		}
+		else {console.log("trizzue"); return true;}
+	}
+	console.log("falsys"); return false;
+}
+binarySearch3([1,2,3,], 4);
+
+
+function binarySearch5(arr, val) {
+	var start = 0;
+	var end = arr.length;
+
+	while(end > start) {
+		var mid = Math.floor((start + end) /2);
+
+		if(val > arr[mid]) {
+			start + 1;
+		}
+		else if(val < arr[mid]) {
+			end = mid;
+		}
+		else { console.log("HI TRU"); return true};
+	}
+	console.log("NOPES"); return false;
+}
+binarySearch5([1,2,3,4],4);
 
 </script>
